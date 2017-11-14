@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+  head
+    title 中国中招网
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" )
+    link(rel="stylesheet", href="/lib/bootstrap.css")
+    link(rel="stylesheet", href="/lib/font-awesome.min.css")
+    link(rel="stylesheet", href="./index.css")
+  body
+    header
+      .container
+        .pull-right
+          a 联系暂定
+          a 客服服务&nbsp;
+            i.fa.fa-angle-down(aria-hidden="true")
+          a 网站导航&nbsp;
+            i.fa.fa-angle-down(aria-hidden="true")
+
+    main
+      #logo
+        div.container
+          img(src="/statics/logo.png", alt="logo")
+      div.container.signin__signup
+        a.btn.btn-primary.signin.js-login 登录
+        a.btn.btn-default.signup.pull-right 注册
+
+    footer
+      .container
+        p.links
+          a 中国中招网首页
+          | |
+          a 关于网站
+          | |
+          a 联系我们
+          | |
+          a 服务条款
+        p.icp 飞龙信息发展股份有限公司©版权所有 2017   ICP证：苏备12067485号
+        p.contact-phone 客服热线：400-8282-808
+
+    //- modal
+    #login-modal.modal.fade(tabindex="-1" role="dialog")
+      .modal-dialog.modal-sm(role="document")
+        .modal-content
+          //- .modal-header
+
+          .clearfix
+            button.pull-left(type="button" class="close" data-dismiss="modal" aria-label="Close") &times;
+            //- span(aria-hidden="true")
+          h4 登陆
+          //- p 登陆
+          .modal-body
+            form
+              .input-group
+                span.input-group-addon
+                  i.fa.fa-user
+                input.form-control(placeholder="请输入用户名")
+              .input-group
+                span.input-group-addon
+                  i.fa.fa-lock
+                input.form-control(placeholder="请输入密码")
+            .forget-link.clearfix
+              a.pull-right 忘记登录密码？
+            button.login.btn.btn-primary.btn-block 登 录
+            .register-link.clearfix
+              a.pull-right 免费注册
+
+    script(src="/lib/jquery.min.js")
+    script(src="/lib/bootstrap.js")
+    script.
+      $('.js-login').on('click', function (){
+        $('#login-modal').modal('show')
+      })
