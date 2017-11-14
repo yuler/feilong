@@ -29,12 +29,11 @@ main {
   padding: 22px 0;
 }
 .signin__signup {
-  width: 440px;
   margin-top: 400px;
 }
 .signin,
 .signup {
-  width: 195px;
+  margin-bottom: 20px;
 }
 .signup,
 .signup:hover {
@@ -61,13 +60,16 @@ footer .links a {
   text-align: center;
 }
 #login-modal .modal-dialog {
-  opacity: 0.9;
-  margin-top: 10%;
+  margin: 0;
+  width: 280px;
+  height: 280px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #login-modal .modal-content {
   background: rgba(0,0,0,0.5);
-  width: 280px;
-  height: 280px;
 }
 #login-modal .modal-body {
   padding: 0 40px;

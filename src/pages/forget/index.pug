@@ -1,0 +1,79 @@
+doctype html
+html(lang="en")
+  head
+    title 中国中招网
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" )
+    link(rel="stylesheet", href="/lib/bootstrap.css")
+    link(rel="stylesheet", href="/lib/font-awesome.min.css")
+    link(rel="stylesheet", href="./index.css")
+  body
+    header
+      .top
+        .container
+          .pull-right
+            a 你好，请登录
+            a 免费注册
+            a 联系暂定
+            a 客服服务&nbsp;
+              i.fa.fa-angle-down(aria-hidden="true")
+            a 网站导航&nbsp;
+              i.fa.fa-angle-down(aria-hidden="true")
+
+      .logo
+        .container
+          img(src="/statics/logo.png", alt="logo")
+          h4 忘记登录密码
+
+
+    main
+      .container
+        p.title 请输入您所需要充值登录密码的账户名
+
+        form
+          .row.form-group
+            .col-sm-3.text-right
+              label(for="username") 账户名
+            .col-sm-4
+              input.form-control(id="username" type="text" placeholder="账户名")
+          .row.form-group
+            .col-sm-3.text-right
+              label(for="username") 验证码
+            .col-sm-4
+              input.form-control(id="username" type="text" placeholder="验证码")
+            .col-sm-2
+              img.verify-code(src="/statics/logo.png")
+            .col-sm-2
+              a.change-link 看不清?换一张
+          .row.form-group
+            .col-sm-3.text-right
+              label(for="username") 手机验证码
+            .col-sm-4
+              input.form-control(id="username" type="text" placeholder="手机验证码")
+            .col-sm-2
+              a.btn.btn-default 点此免费获取
+          br
+          br
+          .row.form-group
+            .col-sm-offset-3.col-sm-2.text-right
+              a.btn.btn-primary.btn-block 下一步
+
+    footer
+      .container
+        p.links
+          a 中国中招网首页
+          | |
+          a 关于网站
+          | |
+          a 联系我们
+          | |
+          a 服务条款
+        p.icp 飞龙信息发展股份有限公司©版权所有 2017   ICP证：苏备12067485号
+        p.contact-phone 客服热线：400-8282-808
+
+    script(src="/lib/jquery.min.js")
+    script(src="/lib/bootstrap.js")
+    script.
+      $('.js-login').on('click', function (){
+        $('#login-modal').modal('show')
+      })

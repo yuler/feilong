@@ -1,0 +1,179 @@
+doctype html
+html(lang="en")
+  head
+    title 中国中招网
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" )
+    link(rel="stylesheet", href="/lib/bootstrap.css")
+    link(rel="stylesheet", href="/lib/font-awesome.min.css")
+    link(rel="stylesheet", href="./index.css")
+  body
+    header
+      .top
+        .container
+          .pull-right
+            a 你好，请登录
+            a 免费注册
+            a 联系暂定
+            a 客服服务&nbsp;
+              i.fa.fa-angle-down(aria-hidden="true")
+            a 网站导航&nbsp;
+              i.fa.fa-angle-down(aria-hidden="true")
+
+      .logo
+        .container
+          img(src="/statics/logo.png", alt="logo")
+          h4 实名注册
+
+    main
+      .container
+        h3.text-center 阳 光 贷 款 · 信 贷 更 放 心
+        p.notice 服务须知：我们的审核时限为24小时（工作日），遇法定节假日顺延。如有疑问，请拨打飞龙热线：400-8282-808
+
+        form
+          div.category.clearfix
+            h4.pull-left 企业信息
+            p.pull-left 按照证书上的内容逐字填写
+
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 账户名
+            .col-md-4
+              input.form-control(id="username" type="text" placeholder="账户名")
+
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 统一社会信用代码
+            .col-md-4
+              input.form-control(id="username" type="text" placeholder="统一社会信用代码")
+
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 营业执照
+            .col-md-4
+              p 上传单位证件照片  企业法人营业执照
+              img.placeholder(src="/statics/upload-image.png")
+
+          div.category.clearfix
+            h4.pull-left 法人信息
+
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 法人姓名
+            .col-md-4
+              input.form-control(id="username" type="text" placeholder="法人姓名")
+
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 法人身份证号码
+            .col-md-4
+              input.form-control(id="username" type="text" placeholder="法人身份证号码")
+
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 上传法人身份证证件照片
+            .col-md-3
+              p 个人信息页
+              img.placeholder(src="/statics/upload-image.png")
+            .col-md-3
+              p 国徽面
+              img.placeholder(src="/statics/upload-image.png")
+
+          div.category.clearfix
+            h4.pull-left 经办人信息
+
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 经办人姓名
+            .col-md-4
+              input.form-control(id="username" type="text" placeholder="经办人姓名")
+
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 经办人身份证号码
+            .col-md-4
+              input.form-control(id="username" type="text" placeholder="经办人身份证号码")
+
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 上传经办人身份证证件照片
+            .col-md-3
+              p 个人信息页
+              img.placeholder(src="/statics/upload-image.png")
+            .col-md-3
+              p 国徽面
+              img.placeholder(src="/statics/upload-image.png")
+
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 邮箱
+            .col-md-4
+              input.form-control(id="username" type="text" placeholder="邮箱")
+
+          div.category.clearfix
+            h4.pull-left 账号信息
+
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 手机号
+            .col-md-3
+              input.form-control(id="username" type="text" placeholder="手机号")
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 账户密码
+            .col-md-3
+              input.form-control(id="username" type="text" placeholder="账户密码")
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 确认密码
+            .col-md-3
+              input.form-control(id="username" type="text" placeholder="确认密码")
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 账户密码
+            .col-md-3
+              input.form-control(id="username" type="text" placeholder="账户密码")
+            .col-md-1
+              img.verify-code(src="/statics/logo.png")
+            .col-md-2
+              a.change-link 看不清?换一张
+          .row.form-group
+            .col-md-3.text-right
+              label(for="username") 手机验证码
+            .col-md-3
+              input.form-control(id="username" type="text" placeholder="手机验证码")
+            .col-md-2
+              a.btn.btn-default 点此免费获取
+
+          .row.form-group
+            .col-md-offset-3.col-md-5
+              input(type="checkbox")
+              span &nbsp;&nbsp;我已阅读并同意
+              a 《飞龙用户注册协议》
+              a 《隐私政策》
+
+          .submit.row.form-group
+            .col-md-offset-3.col-md-2
+              a.btn.btn-block.btn-info 立 即 注 册
+            .col-md-1
+              a.btn.btn-block 返回
+
+    footer
+      .container
+        p.links
+          a 中国中招网首页
+          | |
+          a 关于网站
+          | |
+          a 联系我们
+          | |
+          a 服务条款
+        p.icp 飞龙信息发展股份有限公司©版权所有 2017   ICP证：苏备12067485号
+        p.contact-phone 客服热线：400-8282-808
+
+    script(src="/lib/jquery.min.js")
+    script(src="/lib/bootstrap.js")
+    script.
+      $('.js-login').on('click', function (){
+        $('#login-modal').modal('show')
+      })

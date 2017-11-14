@@ -26,12 +26,12 @@ main
     padding 22px 0
 
 .signin__signup
-  width 410px + 30px
+  // width 410px + 30px
   margin-top 400px
 
 .signin
 .signup
-  width 195px
+  margin-bottom 20px
 
 .signup
 .signup:hover
@@ -56,12 +56,16 @@ footer
     margin-bottom 20px
     text-align center
   .modal-dialog
-    opacity .9
-    margin-top 10%
-  .modal-content
-    background rgba(0, 0, 0, .5)
+    margin 0
     width 280px
     height 280px
+    position absolute
+    top 40%
+    left 50%
+    transform translate(-50%, -50%)
+  .modal-content
+    background rgba(0, 0, 0, .5)
+
   .modal-body
     padding 0 40px
   .input-group

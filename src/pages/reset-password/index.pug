@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+  head
+    title 中国中招网
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" )
+    link(rel="stylesheet", href="/lib/bootstrap.css")
+    link(rel="stylesheet", href="/lib/font-awesome.min.css")
+    link(rel="stylesheet", href="./index.css")
+  body
+    header
+      .top
+        .container
+          .pull-right
+            a 你好，请登录
+            a 免费注册
+            a 联系暂定
+            a 客服服务&nbsp;
+              i.fa.fa-angle-down(aria-hidden="true")
+            a 网站导航&nbsp;
+              i.fa.fa-angle-down(aria-hidden="true")
+
+      .logo
+        .container
+          img(src="/statics/logo.png", alt="logo")
+          h4 重置密码
+
+
+    main
+      .container
+        p.title 你正在为账户 158****3323 重置登录密码，请选择重置方式：
+
+        form
+          .row.form-group
+            .col-sm-3.text-right
+              label(for="username") 新密码
+            .col-sm-4
+              input.form-control(id="username" type="text" placeholder="新密码")
+            .col-sm-4
+              img(src="/statics/success.png")
+              p 该密码可以使用
+          .row.form-group
+            .col-sm-3.text-right
+              label(for="username") 验证新密码
+            .col-sm-4
+              input.form-control(id="username" type="text" placeholder="验证新密码")
+            .col-sm-4
+              img(src="/statics/error.png")
+              p 请输入正确的新密码
+
+          br
+          br
+          .submit.row.form-group
+            .col-sm-offset-3.col-sm-2.text-right
+              a.btn.btn-primary.btn-block 确 认
+            .col-sm-2
+              a.btn 取 消
+
+    footer
+      .container
+        p.links
+          a 中国中招网首页
+          | |
+          a 关于网站
+          | |
+          a 联系我们
+          | |
+          a 服务条款
+        p.icp 飞龙信息发展股份有限公司©版权所有 2017   ICP证：苏备12067485号
+        p.contact-phone 客服热线：400-8282-808
+
+    script(src="/lib/jquery.min.js")
+    script(src="/lib/bootstrap.js")
+    script.
+      $('.js-login').on('click', function (){
+        $('#login-modal').modal('show')
+      })

@@ -21,9 +21,12 @@ html(lang="en")
       #logo
         div.container
           img(src="/statics/logo.png", alt="logo")
-      div.container.signin__signup
-        a.btn.btn-primary.signin.js-login 登录
-        a.btn.btn-default.signup.pull-right 注册
+      div.container
+        .signin__signup.row
+          .col-sm-offset-3.col-sm-3
+            a.btn.btn-block.btn-primary.signin.js-login 登录
+          .col-sm-3
+            a.btn.btn-block.btn-default.signup 注册
 
     footer
       .container
@@ -46,19 +49,17 @@ html(lang="en")
 
           .clearfix
             button.pull-left(type="button" class="close" data-dismiss="modal" aria-label="Close") &times;
-            //- span(aria-hidden="true")
-          h4 登陆
-          //- p 登陆
+          h4 登 录
           .modal-body
             form
               .input-group
                 span.input-group-addon
                   i.fa.fa-user
-                input.form-control(placeholder="请输入用户名")
+                input.form-control(placeholder="请输入用户名" id="username")
               .input-group
                 span.input-group-addon
                   i.fa.fa-lock
-                input.form-control(placeholder="请输入密码")
+                input.form-control(type="password" placeholder="请输入密码")
             .forget-link.clearfix
               a.pull-right 忘记登录密码？
             button.login.btn.btn-primary.btn-block 登 录
@@ -70,4 +71,9 @@ html(lang="en")
     script.
       $('.js-login').on('click', function (){
         $('#login-modal').modal('show')
+        $('.signin__signup').hide()
+        $('#username').focus()
+      })
+      $('#login-modal').on('hidden.bs.modal', function () {
+        $('.signin__signup').show()
       })

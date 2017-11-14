@@ -8,8 +8,12 @@ const sources = {
   lib: 'src/lib/**/*',
   statics: 'statics/**/*',
   pugs: 'src/pages/**/*.pug',
-  // js: 'src/pages/**/*.js',
   stylus: 'src/pages/**/*.styl'
+}
+
+const handerError = err => {
+  console.log(err.toString())
+  this.emit('end')
 }
 
 gulp.task('clean', () => {
@@ -25,16 +29,13 @@ gulp.task('copy', () => {
 
 gulp.task('stylus', () => {
   return gulp.src(sources.stylus)
-    .pipe($.stylus())
+    .pipe($.stylus().on('error', handerError))
     .pipe(gulp.dest(output))
 })
 
 gulp.task('pug', () => {
   return gulp.src(sources.pugs)
-    .pipe($.pug().on('errer', err => {
-      console.log(err.toString())
-      this.emit('end')
-    }))
+    .pipe($.pug().on('errer', handerError))
     .pipe(gulp.dest(output))
 })
 
