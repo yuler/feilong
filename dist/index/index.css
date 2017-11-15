@@ -34,7 +34,10 @@ main {
   height: 80px;
 }
 .signin__signup {
-  margin-top: 25%;
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
 }
 .signin,
 .signup {
