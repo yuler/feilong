@@ -1,3 +1,7 @@
+html,
+body {
+  height: 100%;
+}
 a:hover {
   cursor: pointer;
 }
@@ -16,7 +20,7 @@ header a:hover {
 }
 main {
   width: 100%;
-  height: 693px;
+  height: calc(100% - 124px);
   background: url("/statics/login-bg.png");
   background-position: center;
   background-size: cover;
@@ -26,10 +30,11 @@ main {
   background: rgba(255,255,255,0.9);
 }
 #logo img {
-  padding: 22px 0;
+  width: 80px;
+  height: 80px;
 }
 .signin__signup {
-  margin-top: 400px;
+  margin-top: 35%;
 }
 .signin,
 .signup {
@@ -64,7 +69,7 @@ footer .links a {
   width: 280px;
   height: 280px;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -96,5 +101,5 @@ footer .links a {
   margin-top: 10px;
 }
 .modal-backdrop {
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.3);
 }

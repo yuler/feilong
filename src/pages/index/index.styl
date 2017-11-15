@@ -1,3 +1,7 @@
+html
+body
+  height 100%
+
 a:hover
   cursor pointer
 
@@ -14,7 +18,7 @@ header
 
 main
   width 100%
-  height 80px + 613px
+  height calc(100% - 124px)
   background url('/statics/login-bg.png')
   background-position center
   background-size cover
@@ -23,11 +27,13 @@ main
   height 80px
   background rgba(255, 255, 255, .9)
   img
-    padding 22px 0
+    width 80px
+    height 80px
 
 .signin__signup
+  margin-top 35%
   // width 410px + 30px
-  margin-top 400px
+  // margin-top 400px
 
 .signin
 .signup
@@ -60,7 +66,7 @@ footer
     width 280px
     height 280px
     position absolute
-    top 40%
+    top 50%
     left 50%
     transform translate(-50%, -50%)
   .modal-content
@@ -88,4 +94,4 @@ footer
     margin-top 10px
 
 .modal-backdrop
-  background-color transparent
+  background-color rgba(0, 0, 0, .3)
